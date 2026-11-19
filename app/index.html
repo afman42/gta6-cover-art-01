@@ -3,20 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cover Snap</title>
+<title>Leonida Nights — Vice Cover Studio</title>
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <main class="app">
-  <section class="controls">
-    <h1>Cover Snap</h1>
-    <p>A photo and a caption, made into a square cover.</p>
-    <label>Photo <input id="photo" type="file" accept="image/*"></label>
-    <label>Caption <input id="caption" type="text" maxlength="40" value="Sunset Heist"></label>
+  <section class="controls" aria-label="Cover controls">
+    <header>
+      <h1>Leonida Nights</h1>
+      <p class="tagline">Vice Cover Studio — your photo, made into a GTA-style poster cover.</p>
+    </header>
+
+    <fieldset>
+      <legend>1 · Layout</legend>
+      <div class="button-row" id="layoutButtons"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>2 · Colour grade</legend>
+      <div class="button-row" id="gradeButtons"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>3 · Export size</legend>
+      <div class="button-row" id="sizeButtons"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>4 · Words</legend>
+      <label>Caption <input id="caption" type="text" maxlength="40" value="Neon Shore"></label>
+      <label>Subtitle <input id="subtitle" type="text" maxlength="60" value="Leonida — two worlds, one night"></label>
+      <label>Caption position
+        <select id="captionPos">
+          <option value="bottom" selected>Bottom</option>
+          <option value="top">Top</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>5 · Dressing</legend>
+      <label class="check"><input id="sunToggle" type="checkbox" checked> Sunset sun</label>
+      <label class="check"><input id="palmsToggle" type="checkbox" checked> Palm silhouettes</label>
+    </fieldset>
+
     <button id="export" type="button">Export PNG 1080 x 1080</button>
     <p id="status" role="status"></p>
+    <p class="privacy">Photos stay on your machine — nothing is uploaded.</p>
   </section>
-  <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+
+  <section class="preview" aria-label="Cover preview">
+    <div id="panelEditors" class="panels"></div>
+    <figure>
+      <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+      <figcaption id="sizeLabel">Live preview — 1080 x 1080</figcaption>
+    </figure>
+  </section>
 </main>
 <script type="module" src="./src/main.js"></script>
 </body>

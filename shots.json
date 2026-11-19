@@ -1,5 +1,1 @@
-[
-  { "name": "1-cover.jpg", "query": "?shot=cover&photo=pier&caption=Sunset%20Heist", "w": 1080, "h": 1080 },
-  { "name": "2-editor.jpg", "query": "?shot=editor&photo=boulevard&caption=Boulevard%20Queen", "w": 1280, "h": 720 },
-  { "name": "3-cover.jpg", "query": "?shot=cover&photo=boulevard&caption=Boulevard%20Queen", "w": 1080, "h": 1080 }
-]
+[{"file":"1-cover.jpg","note":"Cover: exported 1920x1080 wide cover, four-panel grid, neon grade, caption Neon Shore","view":"cover","viewport":{"height":720,"width":1280}},{"file":"2-editor.jpg","note":"Editor with a photo loaded: diagonal layout, sunset grade, panel crop/position controls and caption fields","view":"editor","viewport":{"height":800,"width":1280}},{"file":"3-portrait.jpg","note":"Cover: exported 1080x1350 portrait cover, vertical strips, sunset grade, caption Boulevard Queen","view":"cover","viewport":{"height":1280,"width":1024}},{"file":"4-square.jpg","note":"Cover: exported 1080x1080 square cover, diagonal bands, noir grade, caption Midnight Run","view":"cover","viewport":{"height":1080,"width":1080}}]
